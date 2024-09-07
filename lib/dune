@@ -1,0 +1,13 @@
+(menhir (modules menhir_parser))
+(ocamllex (modules lexer))
+
+(library
+ (name entry)
+ (libraries
+  nice_parser
+  linenoise
+  fmlib_std)
+ (preprocess 
+   (pps
+     ppx_inline_test))
+ (inline_tests))
