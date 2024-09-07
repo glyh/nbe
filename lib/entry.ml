@@ -12,10 +12,11 @@ let all_pipeline source =
     source
     |> Parser.parse_string
   in
-  let ret = run_program StrMap.empty parsed in
-  let ret_reflected = reflect StrSet.empty ret in
-  let ret_str = string_of_expr ret_reflected in
-  Printf.printf "Final result: %s\n%!" ret_str
+  ignore (run_program StrMap.empty parsed)
+  (*let ret =  in*)
+  (*let ret_reflected = read_back StrSet.empty ret in*)
+  (*let ret_str = string_of_expr ret_reflected in*)
+  (*Printf.printf "Final result: %s\n%!" ret_str*)
 
 let main () = 
   Parser.pp_exceptions ();

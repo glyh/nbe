@@ -37,7 +37,7 @@ statement:
 
 expression:
   | THE ty=nbe_type e=expression {
-    EAnnotate(e, ty)
+    EThe(ty, e)
   } 
   | FSLASH id=IDENT DOT bdy=expression { ELam(id, bdy) }
   | LET id=IDENT EQ rhs=expression IN inner=expression { 

@@ -4,7 +4,7 @@ let eval_norm source =
   source
   |> Parser.parse_string
   |> run_program StrMap.empty
-  |> reflect StrSet.empty
+  |> read_back StrSet.empty
   |> string_of_expr
 
 let parse_and_check source ctx = 
