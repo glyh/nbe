@@ -1,12 +1,12 @@
-(menhir (modules menhir_parser))
-(ocamllex (modules lexer))
+; (menhir (modules menhir_parser))
+; (ocamllex (modules lexer))
 
 (library
  (name entry)
  (libraries
   nice_parser
   linenoise
-  fmlib_std)
+  batteries)
  (preprocess 
    (pps
      ppx_inline_test))
